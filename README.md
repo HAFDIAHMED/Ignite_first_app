@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PizzaApp
 
 [![CircleCI](https://circleci.com/gh/infinitered/ignite-bowser.svg?style=svg)](https://circleci.com/gh/infinitered/ignite-bowser)
@@ -17,6 +18,11 @@ Currently includes:
 ## Quick Start
 
 The Ignite Bowser boilerplate project's structure will look similar to this:
+=======
+# Ignite_first_app
+
+The Ignite boilerplate project's structure will look similar to this:
+>>>>>>> 4ddf47c018c99300b053fe98ea37d5621cefc747
 
 ```
 ignite-project
@@ -25,7 +31,11 @@ ignite-project
 │   ├── i18n
 │   ├── utils
 │   ├── models
+<<<<<<< HEAD
 │   ├── navigation
+=======
+│   ├── navigators
+>>>>>>> 4ddf47c018c99300b053fe98ea37d5621cefc747
 │   ├── screens
 │   ├── services
 │   ├── theme
@@ -35,6 +45,10 @@ ignite-project
 │   ├── index.ts
 │   ├── storybook-registry.ts
 │   ├── storybook.ts
+<<<<<<< HEAD
+=======
+│   ├── toggle-storybook.tsx
+>>>>>>> 4ddf47c018c99300b053fe98ea37d5621cefc747
 ├── test
 │   ├── __snapshots__
 │   ├── storyshots.test.ts.snap
@@ -43,10 +57,32 @@ ignite-project
 │   ├── setup.ts
 │   ├── storyshots.test.ts
 ├── README.md
+<<<<<<< HEAD
 ├── ignite
 │   ├── ignite.json
 │   └── plugins
 ├── App.js
+=======
+├── android
+│   ├── app
+│   ├── build.gradle
+│   ├── gradle
+│   ├── gradle.properties
+│   ├── gradlew
+│   ├── gradlew.bat
+│   ├── keystores
+│   └── settings.gradle
+├── ignite
+│   ├── ignite.json
+│   └── plugins
+├── index.js
+├── ios
+│   ├── IgniteProject
+│   ├── IgniteProject-tvOS
+│   ├── IgniteProject-tvOSTests
+│   ├── IgniteProject.xcodeproj
+│   └── IgniteProjectTests
+>>>>>>> 4ddf47c018c99300b053fe98ea37d5621cefc747
 ├── .env
 └── package.json
 
@@ -63,13 +99,18 @@ app
 │── components
 │── i18n
 ├── models
+<<<<<<< HEAD
 ├── navigation
+=======
+├── navigators
+>>>>>>> 4ddf47c018c99300b053fe98ea37d5621cefc747
 ├── screens
 ├── services
 ├── theme
 ├── utils
 └── app.tsx
 ```
+<<<<<<< HEAD
 
 **components**
 This is where your React components will live. Each component will have a directory containing the `.tsx` file, along with a story file, and optionally `.presets`, and `.props` files for larger components. The app will come with some commonly used components like Button.
@@ -125,3 +166,5 @@ For Visual Studio Code users, there is a handy extension that makes it easy to l
 ## Premium Support
 
 [Ignite CLI](https://infinite.red/ignite), [Ignite Andross](https://github.com/infinitered/ignite-andross), and [Ignite Bowser](https://github.com/infinitered/ignite-bowser), as open source projects, are free to use and always will be. [Infinite Red](https://infinite.red/) offers premium Ignite support and general mobile app design/development services. Email us at [hello@infinite.red](mailto:hello@infinite.red) to get in touch with us for more details.
+=======
+>>>>>>> 4ddf47c018c99300b053fe98ea37d5621cefc747
