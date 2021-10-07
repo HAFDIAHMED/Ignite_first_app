@@ -5,6 +5,8 @@ import { observer } from "mobx-react-lite"
 import { Button, Header, Screen, Text, Wallpaper } from "../../components"
 import { color, spacing, typography } from "../../theme"
 
+
+
 const bowserLogo = require("./ahmed.jpg")
 
 const FULL: ViewStyle = { flex: 1 }
