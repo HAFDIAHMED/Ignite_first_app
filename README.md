@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+<p align="center"><img src="http://ir_public.s3.amazonaws.com/projects/ignite/ignite-bowser-launch-screen.png" alt="logo" width="414px"></p>
+
+
+
+# Command line to generate ignite project with expo and browser ignite ( no issues"
+```bash
+npx ignite-cli new PizzaApp -b bowser --expo
+```
 # PizzaApp
 
 [![CircleCI](https://circleci.com/gh/infinitered/ignite-bowser.svg?style=svg)](https://circleci.com/gh/infinitered/ignite-bowser)
