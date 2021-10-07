@@ -4,7 +4,7 @@ import { useNavigation } from "@react-navigation/native"
 import { observer } from "mobx-react-lite"
 import { Button, Header, Screen, Text, Wallpaper } from "../../components"
 import { color, spacing, typography } from "../../theme"
-import { Avatar } from "react-native-elements"
+
 const bowserLogo = require("./ahmed.jpg")
 
 const FULL: ViewStyle = { flex: 1 }
