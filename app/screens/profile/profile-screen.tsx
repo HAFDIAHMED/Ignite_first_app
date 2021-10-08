@@ -55,7 +55,7 @@ const PROFILE_PHOTO : ImageStyle ={
  }
  const FOOTER: ViewStyle = { backgroundColor: "#20162D" }
 export const ProfileScreen = observer(function ProfileScreen() {
-  const navigation = useNavigation()
+  //const navigation = useNavigation()
   //const nextScreen = () => navigation.navigate("demo")
 
   return (
