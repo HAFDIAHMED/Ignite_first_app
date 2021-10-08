@@ -1,7 +1,7 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
 import { ViewStyle } from "react-native"
-import { Screen, Text } from "../../components"
+import { Button, Header, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 //import { useStores } from "../../models"
 import { color } from "../../theme"
@@ -16,10 +16,17 @@ export const PageScreen = observer(function PageScreen() {
   // const { someStore, anotherStore } = useStores()
 
   // Pull in navigation via hook
-   const navigation = useNavigation()
+  const navigation = useNavigation()
+  //const goBack = () => navigation.goBack()
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="heloooooo" />
+      <Header headerText="profile information" onLeftPress={()=>{navigation.goBack()}}  leftIcon="back"/>
+      <Text preset="header" text="heloooodoo" />
+      
+      <Button 
+text="hello"
+onPress={()=>console.log("helooo")}
+/>
     </Screen>
   )
 })

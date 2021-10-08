@@ -65,8 +65,12 @@ function App() {
   // otherwise, we're ready to render the app
   return (
     <RootStoreProvider value={rootStore}>
-      <SafeAreaProvider initialSafeAreaInsets={initialWindowSafeAreaInsets}>
-     <PageScreen/>
+      <SafeAreaProvider >
+      <RootNavigator
+          ref={navigationRef}
+          initialState={initialNavigationState}
+          onStateChange={onNavigationStateChange}
+        />
       </SafeAreaProvider>
     </RootStoreProvider>
   )

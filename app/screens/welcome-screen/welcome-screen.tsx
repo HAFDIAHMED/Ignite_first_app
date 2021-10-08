@@ -80,7 +80,7 @@ const FOOTER_CONTENT: ViewStyle = {
 
 export const WelcomeScreen = observer(function WelcomeScreen() {
   const navigation = useNavigation()
-  const nextScreen = () => navigation.navigate("profile")
+  const nextScreen = () => navigation.navigate("demo")
 
   return (
     <View style={FULL}>

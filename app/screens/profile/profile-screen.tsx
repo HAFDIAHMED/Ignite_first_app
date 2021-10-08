@@ -55,8 +55,8 @@ const PROFILE_PHOTO : ImageStyle ={
  }
  const FOOTER: ViewStyle = { backgroundColor: "#20162D" }
 export const ProfileScreen = observer(function ProfileScreen() {
-  //const navigation = useNavigation()
-  //const nextScreen = () => navigation.navigate("demo")
+  const navigation = useNavigation()
+  const nextScreen = () => navigation.navigate("page")
 
   return (
     
@@ -75,21 +75,24 @@ export const ProfileScreen = observer(function ProfileScreen() {
         My passion for software lies with dreaming up ideas and making them come true with elegant interfaces. I take great care in the experience, architecture, and code quality of the things I build.
         I am also an open-source enthusiast and maintainer. I learned a lot from the open-source community and I love how collaboration and knowledge sharing happened through open-source.
         </Text>
-          
+        <View style={BUTTONS} >
+
+
+
+</View>
         
        
         </ScrollView>
      </Screen>   
      <SafeAreaView style={FOOTER}>
-     <View style={BUTTONS} >
-
-        <Button 
-        style={SEE_MORE}
-        text="MORE ABOUT ME"
-        textStyle={TEXT_BUTTON}
-        onPress={()=>{}}
-        />
-      </View>
+          <View style={BUTTONS}>
+          <Button 
+          style={SEE_MORE}
+          text="MORE ABOUT ME"
+          textStyle={TEXT_BUTTON}
+          onPress={()=>{navigation.navigate("page")}}
+          />
+          </View>
      </SafeAreaView>
  
    
