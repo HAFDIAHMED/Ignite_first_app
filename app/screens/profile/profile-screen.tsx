@@ -1,11 +1,12 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
-import { TextStyle, View, ViewStyle,Image, ImageStyle } from "react-native"
-import { Button, Screen, Text, Wallpaper } from "../../components"
+import { TextStyle, View, ViewStyle,Image, ImageStyle, Linking } from "react-native"
+import { Button, Screen, Text } from "../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color, spacing } from "../../theme"
 import { ScrollView } from "react-native-gesture-handler"
+
 
 
 const ROOT: ViewStyle = {
@@ -35,7 +36,21 @@ const PROFILE_PHOTO : ImageStyle ={
 
 
  }
+ const GITHUB : ViewStyle = {
+   paddingHorizontal : spacing[4],
+   paddingVertical : spacing[4],
+   backgroundColor : '#F9AF05'
 
+ }
+ const TEXT_BUTTON : TextStyle = {
+   fontSize : 20,
+ }
+ const BUTTONS :ViewStyle = {
+  paddingHorizontal : spacing[4],
+  paddingVertical : spacing[4],
+  
+
+ }
 export const ProfileScreen = observer(function ProfileScreen() {
  
   return (
@@ -54,6 +69,17 @@ export const ProfileScreen = observer(function ProfileScreen() {
      My passion for software lies with dreaming up ideas and making them come true with elegant interfaces. I take great care in the experience, architecture, and code quality of the things I build.
      I am also an open-source enthusiast and maintainer. I learned a lot from the open-source community and I love how collaboration and knowledge sharing happened through open-source.
      </Text>
+     <View style={BUTTONS} >
+     
+       <Button 
+       style={GITHUB}
+       text="GITHUB"
+       textStyle={TEXT_BUTTON}
+       onPress={()=>{Linking.openURL("https://github.com/HAFDIAHMED")}}
+       />
+     </View>
+   
+     
      
     
      
