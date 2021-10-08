@@ -43,10 +43,7 @@ function App() {
 
   setRootNavigation(navigationRef)
   useBackButtonHandler(navigationRef, canExit)
-  const { initialNavigationState, onNavigationStateChange } = useNavigationPersistence(
-    storage,
-    NAVIGATION_PERSISTENCE_KEY,
-  )
+
 
   // Kick off initial async loading actions, like loading fonts and RootStore
   useEffect(() => {
