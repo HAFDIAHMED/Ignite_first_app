@@ -12,6 +12,10 @@ const ROOT: ViewStyle = {
 }
 const TITLE : TextStyle = {
   color : color.palette.black,
+  textAlign : 'center',
+  fontWeight : 'bold'
+
+
 }
 
 export const ProfileScreen = observer(function ProfileScreen() {
@@ -22,7 +26,7 @@ export const ProfileScreen = observer(function ProfileScreen() {
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="hello" style={TITLE}
+      <Text preset="header" text="I AM A TITLE" style={TITLE}
       
       />
       
