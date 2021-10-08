@@ -3,7 +3,7 @@
 
 
 
-# Command line to generate ignite project with expo and browser ignite ( no issues"
+# Command line to generate ignite project with expo and browser ignite ( no issues)
 ```bash
 npx ignite-cli new PizzaApp -b bowser --expo
 ```
