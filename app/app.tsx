@@ -77,3 +77,9 @@ function App() {
 }
 
 export default App
+
+/*<RootNavigator
+          ref={navigationRef}
+          initialState={initialNavigationState}
+          onStateChange={onNavigationStateChange}
+        />*/
