@@ -25,7 +25,7 @@ const PROFILE_PHOTO : ImageStyle ={
   borderColor : "#E8D329",
   borderWidth : 1,
   alignSelf : 'center',
-  maxWidth : '100%',
+  maxWidth : '95%',
   borderRadius : 500,
   marginVertical : spacing[5],
   
