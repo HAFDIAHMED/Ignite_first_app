@@ -1,0 +1,22 @@
+{
+  "person": [
+    {
+      "id": 1,
+      "full name": "AHMED HAFDI",
+      "age": "23",
+      "job": "software engineer",
+      "email": "ahmed@gmail.com",
+      "phone": "066666666",
+      "Adresse": "no where"
+    },
+    {
+      "id": 2,
+      "full name": "AHMED HAFDI 2",
+      "age": "23",
+      "job": "software engineer",
+      "email": "ahmed@gmail.com",
+      "phone": "066666666",
+      "Adresse": "no where"
+    }
+  ]
+}

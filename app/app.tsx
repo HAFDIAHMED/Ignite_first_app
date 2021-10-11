@@ -33,6 +33,8 @@ import { DrawerScreen, NameScreen, PageScreen, ProfileScreen } from "./screens"
 
 import BottomTab from "./screens/BottomTab"
 import TabTop from "./screens/TabTop"
+import { CrudScreen } from "./screens/crud/crud-screen"
+import MAKE from "./screens/make_api"
 enableScreens()
 
 export const NAVIGATION_PERSISTENCE_KEY = "NAVIGATION_STATE"
@@ -69,7 +71,7 @@ function App() {
   return (
     <RootStoreProvider value={rootStore}>
       <SafeAreaProvider >
-      <DrawerScreen/>
+      <MAKE/>
       </SafeAreaProvider>
     </RootStoreProvider>
   )
