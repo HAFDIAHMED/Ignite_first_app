@@ -18,6 +18,13 @@ function SettingsScreen() {
     </View>
   );
 }
+function AboutScreen() {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>About?</Text>
+      </View>
+    );
+  }
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -27,6 +34,7 @@ export default function TabTop() {
       <Tab.Navigator>
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Settings" component={SettingsScreen} />
+        <Tab.Screen name="About" component={AboutScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
