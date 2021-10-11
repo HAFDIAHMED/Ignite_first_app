@@ -2,7 +2,7 @@
   "person": [
     {
       "id": 1,
-      "full name": "AHMED HAFDI",
+      "name": "AHMED HAFDI",
       "age": "23",
       "job": "software engineer",
       "email": "ahmed@gmail.com",
@@ -11,7 +11,7 @@
     },
     {
       "id": 2,
-      "full name": "AHMED HAFDI 2",
+      "name": "AHMED HAFDI 2",
       "age": "23",
       "job": "software engineer",
       "email": "ahmed@gmail.com",
