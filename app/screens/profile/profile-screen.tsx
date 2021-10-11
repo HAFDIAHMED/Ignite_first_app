@@ -1,6 +1,6 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
-import { TextStyle, View, ViewStyle,Image, ImageStyle, Linking } from "react-native"
+import { TextStyle, View, ViewStyle,Image, ImageStyle } from "react-native"
 import { Button, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 //import { useStores } from "../../models"
@@ -56,7 +56,6 @@ const PROFILE_PHOTO : ImageStyle ={
  const FOOTER: ViewStyle = { backgroundColor: "#20162D" }
 export const ProfileScreen = observer(function ProfileScreen() {
   const navigation = useNavigation()
-  const nextScreen = () => navigation.navigate("page")
 
   return (
     

@@ -2,6 +2,7 @@ import React from "react"
 import { observer } from "mobx-react-lite"
 import { ViewStyle } from "react-native"
 import { Screen, Text } from "../../components"
+import Drawer from 'react-native-drawer'
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
@@ -18,8 +19,10 @@ export const DrawerScreen = observer(function DrawerScreen() {
   // Pull in navigation via hook
   // const navigation = useNavigation()
   return (
-    <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="" />
-    </Screen>
+    <Drawer
+    
+    >
+      
+  </Drawer>
   )
 })
