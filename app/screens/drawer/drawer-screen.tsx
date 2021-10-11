@@ -6,8 +6,14 @@ import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-//import { DrawerNavigator } from "react-navigation"
+import { createDrawerNavigator, DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';//import { DrawerNavigator } from "react-navigation"
+import 'react-native-gesture-handler';
+
+
+
+
+import { createStackNavigator } from '@react-navigation/stack';
+import { GestureHandlerRootView } from "react-native-gesture-handler"
 
 const ROOT: ViewStyle = {
   backgroundColor: color.palette.black,
@@ -35,6 +41,8 @@ function NotificationsScreen({ navigation }) {
   );
 }
 const Drawer = createDrawerNavigator();
+const Stack = createStackNavigator();
+
 
 function MyDrawer() {
   return (
@@ -59,11 +67,10 @@ export const DrawerScreen = observer(function DrawerScreen() {
 
   
   return (
-  <Screen style={ROOT}>
-     <NavigationContainer>
-       <MyDrawer/>
-     </NavigationContainer>
-     
-  </Screen>
+    <NavigationContainer>
+      <MyDrawer/>
+    </NavigationContainer>
+   
+  
   )
 })

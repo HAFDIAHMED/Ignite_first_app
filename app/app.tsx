@@ -69,7 +69,7 @@ function App() {
   return (
     <RootStoreProvider value={rootStore}>
       <SafeAreaProvider >
-      <TabTop/>
+      <DrawerScreen/>
       </SafeAreaProvider>
     </RootStoreProvider>
   )

@@ -5,3 +5,4 @@ export * from "./page/page-screen"
 
 export * from "./drawer/drawer-screen"
 
+export * from "./crud/crud-screen"
