@@ -5,13 +5,18 @@ import { Screen, Text } from "../../components"
 //import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
+import { NavigationContainer } from '@react-navigation/native';
 import {
   createDrawerNavigator,
   DrawerContentScrollView,
   DrawerItemList,
   DrawerItem,
 } from '@react-navigation/drawer';
-import { NavigationContainer } from "@react-navigation/native"
+
+const ROOT: ViewStyle = {
+  backgroundColor: color.palette.black,
+  flex: 1,
+}
 
 function Feed({ navigation }) {
   return (
@@ -21,7 +26,6 @@ function Feed({ navigation }) {
     </View>
   );
 }
-
 function Notifications() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -45,22 +49,16 @@ function CustomDrawerContent(props) {
     </DrawerContentScrollView>
   );
 }
-
-const DrawerPage = createDrawerNavigator();
-
+const Drawer = createDrawerNavigator();
 function MyDrawer() {
   return (
-    <DrawerPage.Navigator
+    <Drawer.Navigator
       drawerContent={(props) => <CustomDrawerContent {...props} />}
     >
-      <DrawerPage.Screen name="Feed" component={Feed} />
-      <DrawerPage.Screen name="Notifications" component={Notifications} />
-    </DrawerPage.Navigator>
+      <Drawer.Screen name="Feed" component={Feed} />
+      <Drawer.Screen name="Notifications" component={Notifications} />
+    </Drawer.Navigator>
   );
-}
-const ROOT: ViewStyle = {
-  backgroundColor: color.palette.black,
-  flex: 1,
 }
 
 export const DrawerScreen = observer(function DrawerScreen() {
@@ -71,7 +69,7 @@ export const DrawerScreen = observer(function DrawerScreen() {
   // const navigation = useNavigation()
   return (
     <NavigationContainer>
-      <MyDrawer />
-    </NavigationContainer>
+    <MyDrawer />
+  </NavigationContainer>
   )
 })
