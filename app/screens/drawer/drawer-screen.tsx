@@ -60,7 +60,9 @@ export const DrawerScreen = observer(function DrawerScreen() {
   
   return (
   <Screen style={ROOT}>
-    <Text>hello</Text>
+     <NavigationContainer>
+       <MyDrawer/>
+     </NavigationContainer>
      
   </Screen>
   )

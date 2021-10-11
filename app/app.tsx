@@ -30,7 +30,8 @@ import { RootStore, RootStoreProvider, setupRootStore } from "./models"
 // https://github.com/kmagiera/react-native-screens#using-native-stack-navigator
 import { enableScreens } from 'react-native-screens'
 import { DrawerScreen, NameScreen, PageScreen, ProfileScreen } from "./screens"
-import Feeds from "./screens/feeds"
+
+import BottomTab from "./screens/BottomTab"
 enableScreens()
 
 export const NAVIGATION_PERSISTENCE_KEY = "NAVIGATION_STATE"
@@ -67,7 +68,7 @@ function App() {
   return (
     <RootStoreProvider value={rootStore}>
       <SafeAreaProvider >
-      <Feeds/>
+      <DrawerScreen/>
       </SafeAreaProvider>
     </RootStoreProvider>
   )
