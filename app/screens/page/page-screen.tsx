@@ -60,6 +60,12 @@ export const PageScreen = observer(function PageScreen() {
         textStyle={BUTTON_TEXT}
         onPress={()=>{Linking.openURL("https://www.linkedin.com/in/ahmed-hafdi-200528188/")}}
       />
+      <Button 
+      style={BUTTON}
+        text="DRAWER"
+        textStyle={BUTTON_TEXT}
+        onPress={()=>{navigation.navigate("drawer")}}
+      />
       </View>
      
       
