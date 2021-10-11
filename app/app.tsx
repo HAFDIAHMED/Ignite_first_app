@@ -66,7 +66,11 @@ function App() {
   return (
     <RootStoreProvider value={rootStore}>
       <SafeAreaProvider >
-     <DrawerScreen/>
+      <RootNavigator
+          ref={navigationRef}
+          initialState={initialNavigationState}
+          onStateChange={onNavigationStateChange}
+        />
       </SafeAreaProvider>
     </RootStoreProvider>
   )
