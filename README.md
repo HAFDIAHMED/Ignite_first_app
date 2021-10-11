@@ -6,8 +6,17 @@
 # Command line to generate ignite project with expo and browser ignite ( no issues)
 ```bash
 npx ignite-cli new PizzaApp -b bowser --expo
-```
 
+```
+## APP SCREENS
+
+ [APP PROFILE VIEW](https://github.com/HAFDIAHMED/Ignite_first_app/blob/master/app_view.md)
+ 
+ [TABS VIEW](https://github.com/HAFDIAHMED/Ignite_first_app/blob/master/tabs_view.md)
+
+ [FETCH API](https://github.com/HAFDIAHMED/Ignite_first_app/blob/master/fetch_api.md)
+
+ [TEST with JEST](https://github.com/HAFDIAHMED/Ignite_first_app/blob/master/test.md)
 
 # PizzaApp
 
