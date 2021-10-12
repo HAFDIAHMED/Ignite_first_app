@@ -1,7 +1,8 @@
 import { iteratorSymbol } from 'mobx/lib/internal';
 import React, { useEffect, useState } from 'react';
 
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { ScreenWidth } from 'react-native-elements/dist/helpers';
 import { Button } from '../components';
 
 function Task(props) {
@@ -11,11 +12,19 @@ function Task(props) {
     ]
     const [tache,setTache]=useState()
     const [taches,setTaches]=useState([])
+    const remove_tache=(index)=>{
+        let taches_copies=[...taches];
+        taches_copies.splice(index,1);
+        setTaches(taches_copies);
+
+
+    }
     useEffect(()=>{
         console.log(taches)
     })
 
     return (
+        <ScrollView>
         <View style={styles.container}>
             <Text style={styles.title}>TASK'S TODAY</Text>
             <View style={styles.input_tasks}>
@@ -29,15 +38,28 @@ function Task(props) {
                     <Button
                     text="add"
                     onPress={()=>setTaches([...taches,tache])}
+                    style={{backgroundColor:'blue'}}
                     />
 
                 </View>
             </View>
-            <View style={styles.tasks_display}>
+            <View >
                 {
                     taches.map((todos,i)=>{
                         return (
-                            <View><Text key={i}>{todos}</Text></View>
+                            <TouchableOpacity onPress={()=>remove_tache(i)}  >
+
+                            <View style={styles.task_container}>
+                                <Text key={i}>{todos}</Text>
+                                <View>
+                                <Button
+                                text='remove'
+                                style={{backgroundColor:'red'}}
+                                onPress={()=>remove_tache(i)}
+                                />
+                                </View>
+                                </View>
+                                </TouchableOpacity >
                         )
                     }
                     )
@@ -46,6 +68,7 @@ function Task(props) {
             </View>
 
         </View>
+        </ScrollView>
     );
 }
 
@@ -78,7 +101,20 @@ const styles = StyleSheet.create({
         borderRadius: 10,
 
     },
-    tasks_display :{
+    task_container :{
+        borderWidth:1,
+        borderRadius : 10,
+        flexDirection : 'row',
+        justifyContent : 'space-between',
+        padding: 15,
+        marginBottom : 20,
+        alignItems : 'center',
+        backgroundColor :'#FFF',
+        width:300,
+
+
+
+
 
     }
     
