@@ -25,7 +25,7 @@ export default function MAKE(props) {
     function list_person(){
         return (
             <View style={{ flex: 1, padding: 24 }}>
-            <Text >FETCH DATA from "http://192.168.0.106:3000/person"</Text>
+            <Text >FETCH DATA dddfrom "http://192.168.0.106:3000/person"</Text>
           {isLoading ? <ActivityIndicator/> : (
             <FlatList
               data={data}
