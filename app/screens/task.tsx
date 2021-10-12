@@ -26,7 +26,7 @@ function Task(props) {
     return (
         <ScrollView>
         <View style={styles.container}>
-            <Text style={styles.title}>TASK'S TODAY</Text>
+            <Text style={styles.title}> TODAY'S TASKS</Text>
             <View style={styles.input_tasks}>
                 <View style={styles.text_input}>
                 <TextInput 
