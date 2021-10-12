@@ -1,4 +1,6 @@
-import React from 'react';
+import { iteratorSymbol } from 'mobx/lib/internal';
+import React, { useEffect, useState } from 'react';
+
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 import { Button } from '../components';
 
@@ -7,6 +9,12 @@ function Task(props) {
         'hello',
         'good morning',
     ]
+    const [tache,setTache]=useState()
+    const [taches,setTaches]=useState([])
+    useEffect(()=>{
+        console.log(taches)
+    })
+
     return (
         <View style={styles.container}>
             <Text style={styles.title}>TASK'S TODAY</Text>
@@ -14,17 +22,26 @@ function Task(props) {
                 <View style={styles.text_input}>
                 <TextInput 
                 placeholder="add task"
+                onChangeText={val=>setTache(val)}
                 />
                 </View>
                 <View >
                     <Button
                     text="add"
-                    onPress={()=>{console.log("task added")}}
+                    onPress={()=>setTaches([...taches,tache])}
                     />
 
                 </View>
             </View>
             <View style={styles.tasks_display}>
+                {
+                    taches.map((todos,i)=>{
+                        return (
+                            <View><Text key={i}>{todos}</Text></View>
+                        )
+                    }
+                    )
+                }
 
             </View>
 
