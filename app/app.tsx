@@ -74,7 +74,7 @@ function App() {
   return (
     <RootStoreProvider value={rootStore}>
       <SafeAreaProvider >
-      <Task/>
+      <To_do/>
       </SafeAreaProvider>
     </RootStoreProvider>
   )

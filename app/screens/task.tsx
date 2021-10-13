@@ -20,7 +20,7 @@ function Task(props) {
 
     }
     useEffect(()=>{
-        console.log(taches)
+        //console.log(taches)
     })
 
     return (
