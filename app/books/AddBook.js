@@ -18,7 +18,7 @@ const books=[{
 @Observer
 export default class bookView extends Component  {
      
-    sttae=initialstate
+    state=initialstate
     onChangeText(key , value){
         this.setState({
             [key]:value

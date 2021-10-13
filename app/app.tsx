@@ -39,6 +39,7 @@ import task from "./screens/task"
 import Task from "./screens/task"
 import To_do from "./screens/to_do"
 import AddBook from "./books/AddBook"
+import { TacheFrScreen } from "./screens/tache-fr/tache-fr-screen"
 enableScreens()
 
 export const NAVIGATION_PERSISTENCE_KEY = "NAVIGATION_STATE"
@@ -75,7 +76,7 @@ function App() {
   return (
     <RootStoreProvider value={rootStore}>
       <SafeAreaProvider >
-      <AddBook/>
+      <TacheFrScreen/>
       </SafeAreaProvider>
     </RootStoreProvider>
   )

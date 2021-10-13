@@ -1,4 +1,5 @@
 import { Instance, SnapshotOut, types } from "mobx-state-tree"
+import { TacheStore, TacheStoreModel } from "../tache-store/tache-store"
 
 /**
  * A RootStore model.
@@ -6,6 +7,7 @@ import { Instance, SnapshotOut, types } from "mobx-state-tree"
 // prettier-ignore
 export const RootStoreModel = types.model("RootStore").props({
 
+    tacheStore : types.optional(TacheStoreModel, {} as TacheStore)
 })
 
 /**

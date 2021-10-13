@@ -6,3 +6,4 @@ export * from "./page/page-screen"
 export * from "./drawer/drawer-screen"
 
 
+export * from "./tache-fr/tache-fr-screen"

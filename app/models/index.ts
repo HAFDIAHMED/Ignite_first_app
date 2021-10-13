@@ -7,3 +7,5 @@ export * from "./root-store/setup-root-store"
 
 export * from "./todo/todo"
 export * from "./todo-store/todo-store"
+export * from "./tache/tache"
+export * from "./tache-store/tache-store"
