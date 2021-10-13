@@ -7,7 +7,6 @@ import { useStores } from "../../models"
 import { TacheModel } from "../../models/tache/tache"
 import { TacheStoreModel } from "../../models/tache-store/tache-store"
 import { color } from "../../theme"
-import Task from "../task"
 
 const ROOT: ViewStyle = {
   backgroundColor: color.palette.black,
@@ -39,7 +38,11 @@ const TACHES : ViewStyle = {
   justifyContent :'space-between'
 
 }
-const data=["hello","hello 1"]
+const data=["hellssso","hellozzzz"]
+const shape= {
+  title : '',
+  author :''
+}
 
 export const TacheFrScreen = observer(function TacheFrScreen() {
   // Pull in one of our MST stores
@@ -50,7 +53,8 @@ export const TacheFrScreen = observer(function TacheFrScreen() {
 
   const {tacheStore} =useStores()
   const {taches}= tacheStore
-  const [task,setTask]=useState()
+  const state=shape
+  const [tassk,setTask]=useState({title : ""})
   const onChangeText= (key , value )=> {
       useState({
         [key]:value
@@ -59,6 +63,18 @@ export const TacheFrScreen = observer(function TacheFrScreen() {
   const AjouterTache =(newTache)=>{
       tacheStore.addTache(newTache)
   }
+  const deleteTache = (nvtache)=>{
+    tacheStore.removeTache(nvtache)
+  }
+  
+  //tacheStore.addTache({title : "ahled"})
+  [...tacheStore.taches,[]]
+  useEffect(()=>{
+    
+    console.log(taches)
+    console.log(taches.length)
+  })
+ 
   
   return (
     <Screen style={ROOT} preset="scroll">
@@ -67,27 +83,29 @@ export const TacheFrScreen = observer(function TacheFrScreen() {
       <View style={INPUT}>
       <TextInput 
        placeholder='write task'
-       onChangeText={(value)=>setTask(value)}
+       
+       onChangeText={(value)=>setTask({title : value})}
        />
       </View>
       <View style={ADD_BUTTON}>
         <Button 
         style={{backgroundColor : 'blue'}}
         text="Add Task"
-        onPress={()=>AjouterTache(task)}
+        onPress={()=>AjouterTache(tassk)}
         
         />
       </View>
       <View >
         {
-          tacheStore.taches.map((data,i)=>{
+          taches.map((books,i)=>{
             return (
               <View style={TACHES}>
-                <Text>{data}</Text>
+                <Text key={i}>{books.title}</Text>
                 <View > 
                   <Button
                   style={{backgroundColor : 'red'}}
                   text="remove Task"
+                  onPress={()=>deleteTache(books)}
                   />
                 </View>
               </View>

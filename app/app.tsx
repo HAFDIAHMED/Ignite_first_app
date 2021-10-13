@@ -40,6 +40,7 @@ import Task from "./screens/task"
 import To_do from "./screens/to_do"
 import AddBook from "./books/AddBook"
 import { TacheFrScreen } from "./screens/tache-fr/tache-fr-screen"
+import { TacheStoreModel } from "./models/tache-store/tache-store"
 enableScreens()
 
 export const NAVIGATION_PERSISTENCE_KEY = "NAVIGATION_STATE"

@@ -1,4 +1,4 @@
-import { Instance, SnapshotOut, types } from "mobx-state-tree"
+import { destroy, Instance, SnapshotOut, types } from "mobx-state-tree"
 import { TacheModel } from "../tache/tache"
 
 /**
@@ -15,6 +15,9 @@ export const TacheStoreModel = types
     addTache(newTache){
       self.taches.push(newTache)
 
+    },
+    removeTache(nvTache){
+      destroy(nvTache)
     }
   }))
   // eslint-disable-line @typescript-eslint/no-unused-vars
@@ -23,4 +26,4 @@ type TacheStoreType = Instance<typeof TacheStoreModel>
 export interface TacheStore extends TacheStoreType {}
 type TacheStoreSnapshotType = SnapshotOut<typeof TacheStoreModel>
 export interface TacheStoreSnapshot extends TacheStoreSnapshotType {}
-export const createTacheStoreDefaultModel = () => types.optional(TacheStoreModel, {taches: ["task 1", "tache 2"]})
+export const createTacheStoreDefaultModel = () => types.optional(TacheStoreModel, {})
