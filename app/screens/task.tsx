@@ -49,7 +49,7 @@ function Task(props) {
                         return (
                             <TouchableOpacity onPress={()=>remove_tache(i)}  >
 
-                            <View style={styles.task_container}>
+                            <View style={styles.task_container} key={i}>
                                 <Text key={i}>{todos}</Text>
                                 <View>
                                 <Button
