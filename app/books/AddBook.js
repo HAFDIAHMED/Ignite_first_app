@@ -37,12 +37,13 @@ export default class bookView extends Component  {
     }
     render (){
     const {books_List} =BookStore
-    console.log(books_List)
+    //console.log(books_List)
     
     
         return (
             <View style={styles.container}> 
              <View style={styles.input_style}>
+                 <Text></Text>
              <TextInput 
               placeholder="title"
               onChangeText={value =>this.onChangeText('title', value)}

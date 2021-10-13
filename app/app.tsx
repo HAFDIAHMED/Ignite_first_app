@@ -77,7 +77,7 @@ function App() {
   return (
     <RootStoreProvider value={rootStore}>
       <SafeAreaProvider >
-      <TacheFrScreen/>
+      <AddBook/>
       </SafeAreaProvider>
     </RootStoreProvider>
   )
