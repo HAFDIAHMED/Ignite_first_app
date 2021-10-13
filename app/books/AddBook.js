@@ -4,7 +4,7 @@ import SwipeButton from 'rn-swipe-button';
 import { Button } from '../components';
 import BookStore from './BookStore';
 import { Component } from 'react';
-import { Observer } from 'mobx-react-lite';
+import { Observer, observer } from 'mobx-react-lite';
 const books=[{
     "title":"hello",
     "author":"authior hello",
@@ -15,8 +15,8 @@ const books=[{
     title : '',
     author :''
 }
-
-export default class AddBook extends Component  {
+@Observer
+export default class bookView extends Component  {
      
     sttae=initialstate
     onChangeText(key , value){
@@ -27,6 +27,13 @@ export default class AddBook extends Component  {
     AjouterBook (){
         BookStore.AddBook(this.state)
         this.setState(initialstate)
+    }
+    toggleRead (livre ){
+        livre.toggleRead()
+
+    }
+    delete(book) {
+        BookStore.removeBook(book)
     }
     render (){
     const {books_List} =BookStore
@@ -58,12 +65,18 @@ export default class AddBook extends Component  {
             </View>
              <View>
                  {
-                     books.map((books,i)=>{
+                     books_List.map((livre,i)=>{
                          return (
-                             <View  style={styles.bookView}key={i}>
-                            <Text key={i}>Title : {books.title}</Text>
-                            <Text>Author :{books.author}</Text>
-                            <Text>Read : {books.read}</Text>
+                             <View  style={styles.bookViews}key={i}>
+                            <Text key={i}>Title : {livre.title}</Text>
+                            <Text>Author :{livre.author}</Text>
+                           
+                            <Text  onPress={()=>this.toggleRead(livre)} >Read : {livre.read ? 'YES' : 'NO'}</Text>
+                            <Button
+                            text="remove book"
+                            onPress={()=>this.delete(livre)}
+                            style={{backgroundColor:'red'}}
+                            />
                             </View>
     
                          )
@@ -100,10 +113,11 @@ const styles = StyleSheet.create({
         backgroundColor : '#C5C5C5'
 
     },
-    bookView : {
+    bookViews : {
         borderWidth : 1,
         width : 300,
         borderRadius : 5,
+        margin : 10,
     },
     button_addbook : {
         margin : 10,
