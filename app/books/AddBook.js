@@ -42,8 +42,9 @@ export default class bookView extends Component  {
     
         return (
             <View style={styles.container}> 
+             <Text>TASKS WITH MST </Text>
              <View style={styles.input_style}>
-                 <Text></Text>
+                
              <TextInput 
               placeholder="title"
               onChangeText={value =>this.onChangeText('title', value)}
