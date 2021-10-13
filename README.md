@@ -22,7 +22,7 @@ npx ignite-cli new PizzaApp -b bowser --expo
  
  [TODO with MST](https://github.com/HAFDIAHMED/Ignite_first_app/blob/master/Task_MST.md)
  
- [TODO with MST & ignite browser](https://github.com/HAFDIAHMED/Ignite_first_app/blob/master/Task_MST.md)
+ [TODO with MST & ignite browser](https://github.com/HAFDIAHMED/Ignite_first_app/blob/master/Task_MST_IGNITE.md)
 
 # PizzaApp
 
