@@ -1,4 +1,3 @@
-import { iteratorSymbol } from 'mobx/lib/internal';
 import React, { useEffect, useState } from 'react';
 
 import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
