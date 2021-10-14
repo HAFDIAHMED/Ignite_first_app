@@ -8,3 +8,4 @@ export * from "./drawer/drawer-screen"
 
 export * from "./tache-fr/tache-fr-screen"
 export * from "./users/users-screen"
+export * from "./splash/splash-screen"
