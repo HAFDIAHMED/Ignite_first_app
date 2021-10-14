@@ -71,8 +71,8 @@ export const TacheFrScreen = observer(function TacheFrScreen() {
   [...tacheStore.taches,[]]
   useEffect(()=>{
     
-    console.log(taches)
-    console.log(taches.length)
+    //console.log(taches)
+    //console.log(taches.length)
   })
  
   
