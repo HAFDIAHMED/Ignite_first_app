@@ -5,6 +5,8 @@ import { Screen, Text } from "../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
+import UserAvatar from 'react-native-user-avatar';
+
 
 const ROOT: ViewStyle = {
   backgroundColor: color.palette.black,
@@ -32,6 +34,7 @@ export const UsersScreen = observer(function UsersScreen() {
       <Text preset="header" text="Users List" />
       <View >
         <View style={USER_VIEW}>
+          <UserAvatar/>
             <Text>helloo</Text>
         </View>
         
