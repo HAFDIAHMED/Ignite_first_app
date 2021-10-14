@@ -43,7 +43,7 @@ export const UsersScreen = observer(function UsersScreen() {
         <View style={USER_VIEW}>
           <View >
           <UserAvatar
-          size="50"
+          size="100"
           name="ahmed hafdi"
           src="https://pbs.twimg.com/profile_images/429442426038538240/6Ac9kykG_400x400.jpeg"
 
