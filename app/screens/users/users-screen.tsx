@@ -26,7 +26,8 @@ const USER_VIEW : ViewStyle={
   flexDirection : 'row'
 }
 const USER_INFO : ViewStyle = {
-  flexDirection : 'column'
+  flexDirection : 'column',
+  margin : 10,
 }
 
 export const UsersScreen = observer(function UsersScreen() {
@@ -42,7 +43,7 @@ export const UsersScreen = observer(function UsersScreen() {
         <View style={USER_VIEW}>
           <View >
           <UserAvatar
-          size="48"
+          size="50"
           name="ahmed hafdi"
           src="https://pbs.twimg.com/profile_images/429442426038538240/6Ac9kykG_400x400.jpeg"
 
@@ -53,8 +54,8 @@ export const UsersScreen = observer(function UsersScreen() {
 
           </View >
           <View  style={USER_INFO}> 
-          <Text>name</Text>
-          <Text>name</Text>
+          <Text>name:</Text>
+          <Text>job:</Text>
           </View>
        
             
