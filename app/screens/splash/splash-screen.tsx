@@ -7,9 +7,10 @@ import { Screen, Text } from "../../components"
 import { color } from "../../theme"
 
 const ROOT: ViewStyle = {
-  backgroundColor: color.palette.black,
+  backgroundColor: color.palette.primary,
   flex: 1,
 }
+
 
 export const SplashScreen = observer(function SplashScreen() {
   // Pull in one of our MST stores
@@ -19,7 +20,7 @@ export const SplashScreen = observer(function SplashScreen() {
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="" />
+      <Text preset="header" text="hezzzloooooo" />
     </Screen>
   )
 })

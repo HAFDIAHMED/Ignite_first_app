@@ -29,7 +29,7 @@ import { RootStore, RootStoreProvider, setupRootStore } from "./models"
 // stack navigation, use `createNativeStackNavigator` in place of `createStackNavigator`:
 // https://github.com/kmagiera/react-native-screens#using-native-stack-navigator
 import { enableScreens } from 'react-native-screens'
-import { DrawerScreen, NameScreen, PageScreen, ProfileScreen,UsersScreen } from "./screens"
+import { DrawerScreen, NameScreen, PageScreen, ProfileScreen,SplashScreen,UsersScreen } from "./screens"
 
 import BottomTab from "./screens/BottomTab"
 import TabTop from "./screens/TabTop"
@@ -75,7 +75,7 @@ function App() {
   return (
     <RootStoreProvider value={rootStore}>
       <SafeAreaProvider >
-      <UsersScreen/>
+      <SplashScreen/>
       </SafeAreaProvider>
     </RootStoreProvider>
   )
