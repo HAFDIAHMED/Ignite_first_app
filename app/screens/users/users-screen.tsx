@@ -42,11 +42,17 @@ export const UsersScreen = observer(function UsersScreen() {
         <View style={USER_VIEW}>
           <View >
           <UserAvatar
+          size="48"
           name="ahmed hafdi"
+          src="https://pbs.twimg.com/profile_images/429442426038538240/6Ac9kykG_400x400.jpeg"
+
           />
+         
+
+
+
           </View >
           <View  style={USER_INFO}> 
-          <Text>name</Text>
           <Text>name</Text>
           <Text>name</Text>
           </View>
