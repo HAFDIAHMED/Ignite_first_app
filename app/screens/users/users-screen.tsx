@@ -30,11 +30,11 @@ const USER_INFO : ViewStyle = {
   margin : 10,
 }
  const data=[
-   {id : "1",name : "ahmed 1", job : "job 1",image : "https://pbs.twimg.com/profile_images/429442426038538240/6Ac9kykG_400x400.jpeg"
+   {id : "1",name : "ahmed 1", job : "job 1",image : "https://avatars.githubusercontent.com/u/58536023?s=400&u=8c34c3af02b96b4bb206ea6f2aae460cad938d6a&v=4"
   },
  {id : "2",name : "ahmed 2", job : "job 2",image : "https://pbs.twimg.com/profile_images/429442426038538240/6Ac9kykG_400x400.jpeg"},
  {id : "3",name : "ahmed 3", job : "job 3",image : "https://pbs.twimg.com/profile_images/429442426038538240/6Ac9kykG_400x400.jpeg"},
- {id : "3",name : "ahmed 3", job : "job 3",image : "https://pbs.twimg.com/profile_images/429442426038538240/6Ac9kykG_400x400.jpeg"}
+ {id : "3",name : "ahmed 3", job : "job 3",image : "https://avatars.githubusercontent.com/u/31248?v=4"}
 
 ]
 export const UsersScreen = observer(function UsersScreen() {
@@ -57,7 +57,7 @@ export const UsersScreen = observer(function UsersScreen() {
                     
                   <UserAvatar
                   size="70"
-                  src="https://pbs.twimg.com/profile_images/429442426038538240/6Ac9kykG_400x400.jpeg"
+                  src={users.image}
                   />
                   </View >
                   <View  style={USER_INFO}> 
