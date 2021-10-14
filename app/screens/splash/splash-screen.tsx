@@ -1,6 +1,6 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
-import { ViewStyle } from "react-native"
+import { Image, ViewStyle } from "react-native"
 import { Screen, Text } from "../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -20,7 +20,11 @@ export const SplashScreen = observer(function SplashScreen() {
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="hezzzloooooo" />
+      <Text preset="header" text="" />
+      <Image
+               source ={require("C:\Users\ahafdi\Desktop\react native\ignite\PizzaApp\assets\images\logo.png")}
+
+      />
     </Screen>
   )
 })
