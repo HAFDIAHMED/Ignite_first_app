@@ -6,6 +6,8 @@ import { Screen, Text } from "../../components"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 import UserAvatar from 'react-native-user-avatar';
+import { Avatar } from 'react-native-elements';
+
 
 
 const ROOT: ViewStyle = {
@@ -18,9 +20,13 @@ const USER_VIEW : ViewStyle={
   borderWidth :1,
   width:300,
   margin : 10,
-  height : 90,
+  //height : 90,
   borderRadius:20,
   alignItems:'center',
+  flexDirection : 'row'
+}
+const USER_INFO : ViewStyle = {
+  flexDirection : 'column'
 }
 
 export const UsersScreen = observer(function UsersScreen() {
@@ -34,8 +40,18 @@ export const UsersScreen = observer(function UsersScreen() {
       <Text preset="header" text="Users List" />
       <View >
         <View style={USER_VIEW}>
-          <UserAvatar/>
-            <Text>helloo</Text>
+          <View >
+          <UserAvatar
+          name="ahmed hafdi"
+          />
+          </View >
+          <View  style={USER_INFO}> 
+          <Text>name</Text>
+          <Text>name</Text>
+          <Text>name</Text>
+          </View>
+       
+            
         </View>
         
       </View>
