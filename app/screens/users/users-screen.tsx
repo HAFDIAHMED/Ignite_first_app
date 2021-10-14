@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState,useEffect } from "react"
 import { observer } from "mobx-react-lite"
 import { TouchableOpacity, View, ViewStyle } from "react-native"
 import { Screen, Text } from "../../components"
@@ -6,7 +6,7 @@ import { Screen, Text } from "../../components"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 import UserAvatar from 'react-native-user-avatar';
-import { Avatar } from 'react-native-elements';
+
 
 
 
@@ -43,12 +43,33 @@ export const UsersScreen = observer(function UsersScreen() {
 
   // Pull in navigation via hook
   // const navigation = useNavigation()
+  const [isLoading,setLoading]=useState(true)
+  const [users_list,setUsers]=useState([])
+  const getUsers = async()=>{
+    try {
+      const response = await fetch("http://192.168.0.106:3000/person")
+      const json= await response.json()
+      setUsers(json)
+
+
+
+    }catch(error){
+      console.error(error)
+    }finally {
+      setLoading(false)
+    }
+
+  }
+  useEffect(()=>{
+    getUsers()
+    //console.log(users_list)
+  })
   return (
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="Users List" />
       <View >
       {
-              data.map((users,index)=>{
+              users_list.map((users,index)=>{
                 return (
                   <TouchableOpacity style={USER_VIEW}
                   onPress={()=>{console.log("gello")}}

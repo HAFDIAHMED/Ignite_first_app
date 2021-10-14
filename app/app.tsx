@@ -75,7 +75,7 @@ function App() {
   return (
     <RootStoreProvider value={rootStore}>
       <SafeAreaProvider >
-      <MAKE/>
+      <UsersScreen/>
       </SafeAreaProvider>
     </RootStoreProvider>
   )
