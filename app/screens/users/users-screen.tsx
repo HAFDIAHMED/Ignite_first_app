@@ -1,6 +1,6 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
-import { ViewStyle } from "react-native"
+import { View, ViewStyle } from "react-native"
 import { Screen, Text } from "../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -9,6 +9,16 @@ import { color } from "../../theme"
 const ROOT: ViewStyle = {
   backgroundColor: color.palette.black,
   flex: 1,
+  alignItems : 'center',
+}
+const USER_VIEW : ViewStyle={
+  backgroundColor : "#5D2555",
+  borderWidth :1,
+  width:300,
+  margin : 10,
+  height : 90,
+  borderRadius:20,
+  alignItems:'center',
 }
 
 export const UsersScreen = observer(function UsersScreen() {
@@ -19,7 +29,13 @@ export const UsersScreen = observer(function UsersScreen() {
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="" />
+      <Text preset="header" text="Users List" />
+      <View >
+        <View style={USER_VIEW}>
+            <Text>helloo</Text>
+        </View>
+        
+      </View>
     </Screen>
   )
 })
