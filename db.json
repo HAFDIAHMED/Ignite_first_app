@@ -7,7 +7,8 @@
       "job": "software engineer",
       "email": "ahmed@gmail.com",
       "phone": "066666666",
-      "Adresse": "no where"
+      "Adresse": "no where",
+      "image" : "https://pbs.twimg.com/profile_images/429442426038538240/6Ac9kykG_400x400.jpeg"
     },
     {
       "id": 2,
@@ -16,7 +17,9 @@
       "job": "software engineer",
       "email": "ahmed@gmail.com",
       "phone": "066666666",
-      "Adresse": "no where"
+      "Adresse": "no where",
+      "image" : "https://pbs.twimg.com/profile_images/429442426038538240/6Ac9kykG_400x400.jpeg"
+
     }
   ]
 }

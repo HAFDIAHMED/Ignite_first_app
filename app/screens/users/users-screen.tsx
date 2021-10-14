@@ -1,6 +1,6 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
-import { View, ViewStyle } from "react-native"
+import { TouchableOpacity, View, ViewStyle } from "react-native"
 import { Screen, Text } from "../../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -21,7 +21,7 @@ const USER_VIEW : ViewStyle={
   width:300,
   margin : 10,
   //height : 90,
-  borderRadius:20,
+  borderRadius:36,
   alignItems:'center',
   flexDirection : 'row'
 }
@@ -29,7 +29,14 @@ const USER_INFO : ViewStyle = {
   flexDirection : 'column',
   margin : 10,
 }
+ const data=[
+   {id : "1",name : "ahmed 1", job : "job 1",image : "https://pbs.twimg.com/profile_images/429442426038538240/6Ac9kykG_400x400.jpeg"
+  },
+ {id : "2",name : "ahmed 2", job : "job 2",image : "https://pbs.twimg.com/profile_images/429442426038538240/6Ac9kykG_400x400.jpeg"},
+ {id : "3",name : "ahmed 3", job : "job 3",image : "https://pbs.twimg.com/profile_images/429442426038538240/6Ac9kykG_400x400.jpeg"},
+ {id : "3",name : "ahmed 3", job : "job 3",image : "https://pbs.twimg.com/profile_images/429442426038538240/6Ac9kykG_400x400.jpeg"}
 
+]
 export const UsersScreen = observer(function UsersScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
@@ -40,26 +47,29 @@ export const UsersScreen = observer(function UsersScreen() {
     <Screen style={ROOT} preset="scroll">
       <Text preset="header" text="Users List" />
       <View >
-        <View style={USER_VIEW}>
-          <View >
-          <UserAvatar
-          size="100"
-          name="ahmed hafdi"
-          src="https://pbs.twimg.com/profile_images/429442426038538240/6Ac9kykG_400x400.jpeg"
-
-          />
-         
-
-
-
-          </View >
-          <View  style={USER_INFO}> 
-          <Text>name:</Text>
-          <Text>job:</Text>
-          </View>
-       
-            
-        </View>
+      {
+              data.map((users,index)=>{
+                return (
+                  <TouchableOpacity style={USER_VIEW}
+                  onPress={()=>{console.log("gello")}}
+                  >
+                  <View >
+                    
+                  <UserAvatar
+                  size="70"
+                  src="https://pbs.twimg.com/profile_images/429442426038538240/6Ac9kykG_400x400.jpeg"
+                  />
+                  </View >
+                  <View  style={USER_INFO}> 
+                  <Text>name: {users.name}</Text>
+                  <Text>job: {users.job}</Text>
+                  </View>     
+                </TouchableOpacity>
+                  
+                );
+              })
+            }
+      
         
       </View>
     </Screen>
