@@ -66,7 +66,7 @@ export const UsersScreen = observer(function UsersScreen() {
   })
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="Users List" />
+      <Text preset="header" text="Ussers List" />
       <View >
       {
               users_list.map((users,index)=>{
